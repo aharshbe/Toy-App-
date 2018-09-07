@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Week 3 Lab: 
+    * Toy database challenge using Rails scaffolding
+    * Deployed to GitHub + Heroku
+    * Heroku link: https://cryptic-mountain-44459.herokuapp.com/
 
-Things you may want to cover:
+<h3>Created by Austin Harshberger</h3>
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
