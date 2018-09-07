@@ -12,7 +12,16 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @micropost.content %>
+  <%= 
+    begin
+      @micropost.content
+    rescue
+      "No posts for " + @user.name + " yet."
+    else
+      @micropost.content
+    end
+
+  %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
