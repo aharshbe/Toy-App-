@@ -12,16 +12,29 @@
 
 <p>
   <strong>Content:</strong>
-  <%= 
+  <% @i = 0 %>
+  <%
     begin
-      @micropost.content
-    rescue
-      "No posts for " + @user.name + " yet."
-    else
-      @micropost.content
-    end
-
+      @user.microposts.each do | post |
   %>
+        <% post.content %>
+     <% end %>
+  <%rescue %>
+      <%= "Didn't work." %>
+  <%else %>
+   <%
+      @user.microposts.each do | post |
+    %>
+       <p></p>
+       <% @i += 1 %>
+       <%= "Post ##{@i}. " %>
+       <%= post.content %>
+      <% end %>
+      <% if @i == 0 %>
+        <%= "No posts yet" %>
+      <% end %>
+    <% end %>
+  <p></p>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
